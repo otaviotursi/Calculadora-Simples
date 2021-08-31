@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+
+
+.row{
+    margin: 0;
+}
+.calculadora{
+    border: 1px solid black;
+    margin-top: 40px;
+    background-color: rgb(54, 54, 54);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.texto-visor{
+    background-color: white;
+    text-align: end;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+.btn{
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+
+}
+
+.btn-W{
+    width: 110px;
+}
+
+.btn-H{
+    height: 110px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calculaValor(numero){
+            if (numero === 'C') {
+                document.getElementById('conta-visor').value = '';
+            } else if (numero === '='){
+                var resultado = eval(document.getElementById('conta-visor').value);
+                document.getElementById('conta-visor').value = resultado;
+            } else {
+                document.getElementById('conta-visor').value += numero;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="calculadora">
+                    <div class="row">
+                        <input type="text" id="conta-visor" class="form-control texto-visor" placeholder="0" disabled="disabled">
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-secondary btn-lg btn-W" onclick="calculaValor('C')">C</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('/')">/</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('*')">x</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('7')">7</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('8')">8</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('9')">9</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('+')">-</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('4')">4</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('5')">5</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('6')">6</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('+')">+</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('1')">1</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('2')">2</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('3')">3</button>
+                        <button type="button" class="btn btn-secondary btn-lg btn-H" onclick="calculaValor('=')">=</button>
+                    </div>
+                    <div class="row" style="margin-top: -60px">
+                        <button type="button" class="btn btn-secondary btn-lg btn-W" onclick="calculaValor('0')">0</button>
+                        <button type="button" class="btn btn-secondary btn-lg" onclick="calculaValor('.')">.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
